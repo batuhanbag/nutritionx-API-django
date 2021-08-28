@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nutritionxAPI</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+    <div id="container">
+        <h2>nutritionxAPI</h2>
+        <div class="search">
+            <form method="POST">
+                {% csrf_token %}
+                <input type="text" name="foodName">
+                <button type="submit">Search Food</button>
+            </form>
+        </div>
+        <div class="result">
+            <h2>Results:</h2>
+            <p> <strong>Name : </strong>{{nutrition_name}}</p>
+            <p> <strong>Serving Size-(Unit) : </strong>{{nutrition_size}}</p>
+            <p> <strong>Calories : </strong>{{nutrition_calories}}</p>
+            <p> <strong>Protein : </strong>{{nutrition_protein}}</p>
+            <p> <strong>Carb : </strong>{{nutrition_carb}}</p>
+            <p> <strong>Fat : </strong>{{nutrition_fat}}</p>
+            <p> <strong>Sugar : </strong>{{nutrition_sugar}}</p>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>
