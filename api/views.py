@@ -12,8 +12,8 @@ def index(request):
 
     if input:
 
-        api_id = 'f98b9fa4'
-        api_key = '3849eb602d8d43887b947eee7bcb6836'
+        api_id = 'YOUR API ID'
+        api_key = 'YOUR API KEY'
         body = '?results=0:1&fields=*&'
         url = 'https://api.nutritionix.com/v1_1/search/'+input + \
             body+'appId='+api_id+'&appKey='+api_key
